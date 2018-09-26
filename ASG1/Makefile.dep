@@ -1,0 +1,9 @@
+# Makefile.dep created Mon Jan 22 23:48:47 PST 2018
+ubigint.o: ubigint.cpp ubigint.h debug.h relops.h util.h
+bigint.o: bigint.cpp bigint.h debug.h relops.h ubigint.h
+libfns.o: libfns.cpp libfns.h bigint.h debug.h relops.h ubigint.h
+scanner.o: scanner.cpp scanner.h debug.h
+debug.o: debug.cpp debug.h util.h
+util.o: util.cpp util.h debug.h
+main.o: main.cpp bigint.h debug.h relops.h ubigint.h iterstack.h libfns.h \
+ scanner.h util.h
